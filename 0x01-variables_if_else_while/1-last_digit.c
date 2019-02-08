@@ -25,7 +25,7 @@ int main(void)
 {
 	printf("%d is %d and is less than 6 and not 0\n", n, n % 10);
 }
-	else
+	else if (n % 10 == 0)
 {
 	printf("%d is %d and is zero\n", n, n % 10);
 }

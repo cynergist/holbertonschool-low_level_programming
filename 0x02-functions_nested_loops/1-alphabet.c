@@ -1,12 +1,12 @@
 #include "holberton.h"
 /**
- * main - prints the alphabet in lowercase, followed by a new line.
+ * print_alphabet - prints the alphabet in lowercase, followed by a new line.
  * Description - Uses _putchar twice only.
  * Return: Always 0.
  */
-int main(void)
+void print_alphabet(void)
 {
-	char let = 'a';
+	char let;
 
 	for (let = 'a'; let <= 'z'; let++)
 
@@ -14,5 +14,4 @@ int main(void)
 		_putchar(let);
 	}
 	_putchar('\n');
-	return (0);
 }

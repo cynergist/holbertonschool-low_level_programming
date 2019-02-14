@@ -1,4 +1,5 @@
-**0x03. C - More functions, more nested loops**
+# 0x03. C - More functions, more nested loops <br />
+
 Year 1 - Low-level programming & Algorithm ― Hatching out
 
 by Julien Barbier, co-founder at Holberton School

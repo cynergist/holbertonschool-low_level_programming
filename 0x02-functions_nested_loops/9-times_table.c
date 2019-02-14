@@ -13,7 +13,7 @@ void times_table(void)
 	while (x <= 9)
 	{
 		y = 0;
-		while (y <= 0)
+		while (y <= 9)
 		{
 			xy = x * y;
 			xy1 = xy / 10;

@@ -15,17 +15,17 @@ void print_triangle(int size)
 
 	if (size == 0)
 	{
-	_putchar('\n');
+		_putchar('\n');
 	}
 	while (size)
 	{
-	size--;
-	for (i = 0; i < spaces; i++)
-		_putchar(' ');
-	for (i = 0; i < hashes; i++)
-		_putchar('#');
+		size--;
+		for (i = 0; i < spaces; i++)
+			_putchar(' ');
+		for (i = 0; i < hashes; i++)
+			_putchar('#');
 		_putchar('\n');
-	spaces--;
-	hashes++;
+		spaces--;
+		hashes++;
 	}
 }

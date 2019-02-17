@@ -12,9 +12,9 @@ void print_triangle(int size)
 	int spaces = size - 1;
 	int hashes = 1;
 
-	if (size == 0)
+	if (size <= 0)
 		_putchar('\n');
-	while (size)
+	while (size > 0)
 	{
 		size--;
 		for (i = 0; i < spaces; i++)

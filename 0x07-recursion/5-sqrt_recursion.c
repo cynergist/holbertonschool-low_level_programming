@@ -32,7 +32,7 @@ int helper_function(int n, int half)
  * @n: an integer for the base number and the power.
  * Description - similar to sqrt in standard library.
  *
- * Return: if n is 0, returns -1, otherwise returns value of
+ * Return: if n is negative, returns -1, otherwise returns value of
  * x raised to th power of x.
  */
 int _sqrt_recursion(int n)
@@ -43,7 +43,7 @@ int _sqrt_recursion(int n)
 	return (1);
 	}
 /* special case */
-	if (n < 0)
+	if (n <= -1)
 	{
 	return (-1);
 	}

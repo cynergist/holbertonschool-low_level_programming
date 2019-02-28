@@ -20,8 +20,7 @@ int factorial(int n)
 	}
 	else
 	{
-		n--;
-/* call factorial on n and then multiply it by n plus one. */
-		return (factorial(n) * (n + 1));
+/* call factorial on n minus one and then multiply it by n. */
+		return (n * factorial(n - 1));
 	}
 }

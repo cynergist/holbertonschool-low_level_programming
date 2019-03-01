@@ -17,14 +17,14 @@ int helper_function(int n, int half)
 	return (half);
 	}
 /* if half is 1, return -1 */
-	if (half == 1)
+	if (half == n / 2)
 	{
 	return (-1);
 	}
 	else
 	{
-/* call helper_function on n to the half and subtract one from it. */
-	return (helper_function(n, half - 1));
+/* call helper_function on n to the half and add one to it. */
+	return (helper_function(n, half + 1));
 	}
 }
 /**
@@ -55,6 +55,6 @@ int _sqrt_recursion(int n)
 	else
 	{
 /* call helper_function on n and n divided by 2 (to reduce large num) */
-		return (helper_function(n, n / 2));
+       	return (helper_function(n, 0));
 	}
 }

@@ -14,17 +14,17 @@ int helper_function(int n, int half)
 /* if half of n times itself is n, then it is already a natural sq root. */
 	if (half * half == n)
 	{
-	return (half);
+		return (half);
 	}
 /* if half is 1, return -1 */
 	if (half == n / 2)
 	{
-	return (-1);
+		return (-1);
 	}
 	else
 	{
 /* call helper_function on n to the half and add one to it. */
-	return (helper_function(n, half + 1));
+		return (helper_function(n, half + 1));
 	}
 }
 /**
@@ -40,21 +40,21 @@ int _sqrt_recursion(int n)
 /* return sqrt*/
 	if (n == 1)
 	{
-	return (1);
+		return (1);
 	}
 /* special case */
 	if (n <= -1)
 	{
-	return (-1);
+		return (-1);
 	}
 /* special case */
 	if (n == 0)
 	{
-	return (0);
+		return (0);
 	}
 	else
 	{
 /* call helper_function on n and n divided by 2 (to reduce large num) */
-       	return (helper_function(n, 0));
+		return (helper_function(n, 0));
 	}
 }

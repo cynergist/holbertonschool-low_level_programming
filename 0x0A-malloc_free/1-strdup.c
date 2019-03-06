@@ -35,11 +35,10 @@ char *_strdup(char *str)
 /* Allocating memory to the pointer for the size of char array */
 	dupe = malloc(_strlen(str) * sizeof(char) + 1);
 
-	for (i = 0; i <= _strlen(str); i++)
+	for (i = 0; i < _strlen(str); i++)
 	{
 		dupe[i] = str[i];
 	}
 	dupe[i] = '\0';
 	return (dupe);
-	free(dupe);
 }

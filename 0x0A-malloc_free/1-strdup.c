@@ -34,7 +34,12 @@ char *_strdup(char *str)
 	}
 /* Allocating memory to the pointer for the size of char array */
 	dupe = malloc(_strlen(str) * sizeof(char) + 1);
-
+/* Check to see if memory has been successfully allocated */
+	if (dupe == NULL)
+	{
+		return (NULL);
+	}
+/* Starting index at zero, as long as index is less than strlen, increment i */
 	for (i = 0; i < _strlen(str); i++)
 	{
 		dupe[i] = str[i];

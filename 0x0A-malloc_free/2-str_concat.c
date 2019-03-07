@@ -9,7 +9,6 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-/* Declared duplicate and index of the array */
 	char *p_s1_s2;
 	int size_s1, size_s2, i;
 
@@ -32,7 +31,10 @@ char *str_concat(char *s1, char *s2)
 		size_s2++;
 	}
 	p_s1_s2 = malloc((size_s1 + size_s2) * sizeof(char) + 1);
-
+	if (p_s1_s2 == NULL)
+	{
+		return (NULL);
+	}
 	i = 0;
 	while (s1[i] != '\0')
 	{
@@ -42,7 +44,6 @@ char *str_concat(char *s1, char *s2)
 	i = 0;
 	while (s2[i] != '\0')
 	{
-/* Start copying s2 after s1 by incrementing size_s1 by i*/
 		p_s1_s2[size_s1 + i] = s2[i];
 		i++;
 	}

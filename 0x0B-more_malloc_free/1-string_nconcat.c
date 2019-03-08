@@ -51,8 +51,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	j = 0;
 	while (j < n)
 	{
-		p_s1_ns2[len_s1++] = s2[j];
+		p_s1_ns2[i] = s2[j];
 		j++;
+		i++;
 	}
 /* When index at our pointer reaches null, return pointer */
 	p_s1_ns2[i] = '\0';

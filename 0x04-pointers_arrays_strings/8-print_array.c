@@ -15,7 +15,7 @@ void print_array(int *a, int n)
 	while (index < n)
 	{
 /* If index is the last one of the array, only print the element */
-		if (index == n)
+		if (index == n - 1)
 			printf("%i", a[index]);
 /* Otherwise, print the element, a comma and a space */
 		else

@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-/* Print on a new line, __FILE__ expands to the name of the urrent input file */
+/* Print, new line, __FILE__ expands to the name of the current input file */
 	printf("%s\n", __FILE__);
 	return (0);
 }

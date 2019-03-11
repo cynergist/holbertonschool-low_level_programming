@@ -9,10 +9,10 @@
  */
 void print_array(int *a, int n)
 {
+/* Starting index at zero */
 	int index = 0;
 /* As long as our index is less than the number of elements in the array */
 	while (index < n)
-/* Increment the index, iterating through the number of elements */
 	{
 /* If index is the last one of the array, only print the element */
 		if (index == n)
@@ -20,6 +20,7 @@ void print_array(int *a, int n)
 /* Otherwise, print the element, a comma and a space */
 		else
 			printf("%i, ", a[index]);
+/* Increment the index, iterating through the number of elements */
 		index++;
 	}
 /* Print a new line after finishing loop */

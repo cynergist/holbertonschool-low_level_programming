@@ -9,29 +9,15 @@
  */
 void print_dog(struct dog *d)
 {
-/* If the pointer to dog is NULL, proceed */
-	if (d == NULL)
-		return;
-/* If there is no name assigned to dog, use "(nil)" */
-	if (d->name)
+	if (d)
 	{
-		d->name = d->name;
-	}
-		else
-		{
-			d->name = "(nil)";
-		}
-/* If there is no owner assigned to dog, use "(nil)" */
-	if (d->owner)
-	{
-		d->owner = d->owner;
+/* Print name, age, and owner */
+		printf("Name: %s \n", d->name ? d->name : "(nil)");
+		printf("Age: %.6f \n", d->age);
+		printf("Owner: %s \n", d->owner ? d->owner : "(nil)");
 	}
 	else
-		{
-		d->owner = "(nil)";
-		}
-/* Print name, age, and owner */
-	printf("Name: %s \n", d->name ? d->name : "(nil)");
-	printf("Age: %.6f \n", d->age);
-	printf("Owner: %s \n", d->owner ? d->owner : "(nil)");
+	{
+		return;
+	}
 }

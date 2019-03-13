@@ -10,9 +10,7 @@
  */
 void print_name(char *name, void (*f)(char *))
 {
-/* Call the function passed to you with the string passed to you */
 /* If name is null or function is null, or if (!name || !f) */
 	if (name && f)
-/* Then call f on the name */
 		f(name);
 }

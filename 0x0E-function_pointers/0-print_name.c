@@ -10,7 +10,7 @@
  */
 void print_name(char *name, void (*f)(char *))
 /* We know that print_name takes 2 arguments. One is a string called name */
-/* The other argument is a pointer to a function that calls a string */
+/* The other argument is a pointer to a function that takes a string */
 {
 /* If name is null or function is null, or if (!name || !f) */
 	if (name && f)

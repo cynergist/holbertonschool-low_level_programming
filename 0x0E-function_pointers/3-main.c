@@ -1,9 +1,30 @@
-/** This file should contain your main function only.
+#include "3-calc.h"
+
+/**
+ * main - This function handles our validation inputs and arg
+ * @argc: number of arguments
+ * @argv: arguments passed
  *
- * You are not allowed to code any other function than main in this file
- * You are not allowed to directly call op_add, op_sub, op_mul, op_div or 
- * op_mod from the main function
- * You have to use atoi to convert arguments to int
- * You are not allowed to use any kind of loop
- *You are allowed to use a maximum of 3 if statements
+ * Return: zero if success
  */
+
+int main(int argc, char **argv)
+{
+	if (argc != 4)
+	{
+		printf("Error\n");
+		exit(98);
+	}
+	if (!get_op_func(argv[2]))
+	{
+		printf("Error\n");
+		exit(99);
+	}
+	if ((argv[2][0] == '/' || argv[2][0] == '%') && !atoi(argv[3]))
+	{
+		printf("Error\n");
+		exit(100);
+	}
+	printf("%d/n", get_op_func(argv[2])(atoi(argv[1]), atoi(argv[3])));
+	return (0);
+}

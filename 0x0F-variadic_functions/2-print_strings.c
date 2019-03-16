@@ -2,26 +2,32 @@
 #include <stdio.h>
 #include "variadic_functions.h"
 /**
- * print_numbers - function prints numbers followed by a new line
+ * print_strings - function prints strings followed by a new line
  *
  * @separator: a string
  * @n: an unsigned integer
- * Return: numbers printed, followed by a new line
+ * Return: strings printed, followed by a new line
  */
-void print_numbers(const char *separator, const unsigned int n, ...)
+void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list ap;
 	unsigned int i;
+	char *string;
 /* Initializing arguments to store all values after n */
 	va_start(ap, n);
 
-	if (!separator || separator == NULL)
-		printf("NULL");
 /* This loops through all the other arguments. n contains count of variables */
 	for (i = 0; i < n; i++)
 	{
-		printf("%i\n", va_arg(ap, int));
+		string = va_arg(ap, char *);
+		if (!string)
+			printf("(nil)");
+		if (!separator || separator == NULL)
+			printf("%s", separator);
+		else
+			printf("%s", string);
 	}
 /* Cleans up the list */
 	va_end(ap);
+	printf("\n");
 }

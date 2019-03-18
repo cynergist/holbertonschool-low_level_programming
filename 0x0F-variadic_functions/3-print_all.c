@@ -50,10 +50,6 @@ void print_string(va_list all_parameters)
  */
 void print_all(const char * const format, ...)
 {
-	va_list all_parameters;
-	char *string = "", *string2 = ", ";
-	int i = 0;
-	int j = 0;
 	specifier_t structs_ar[] = {
 		{"c", print_char},
 		{"i", print_int},
@@ -62,13 +58,18 @@ void print_all(const char * const format, ...)
 		{"\0", NULL}
 	};
 
+	va_list all_parameters;
+	char *string = "", *string2 = ", ";
+	unsigned int i, j;
+
 	va_start(all_parameters, format);
+	i = 0;
 	while (format && format[i])
 	{
 		j = 0;
-		while (structs_ar[j].spec)
+		while (j < 4)
 		{
-		if (format[i] == *structs_ar[j].spec)
+			if (format[i] == *structs_ar[j].spec)
 		{
 			printf("%s", string);
 			structs_ar[j].function_ptr(all_parameters);
@@ -79,6 +80,6 @@ void print_all(const char * const format, ...)
 	i++;
 }
 /* Cleans up the list */
-	printf("\n");
 	va_end(all_parameters);
+	printf("\n");
 }

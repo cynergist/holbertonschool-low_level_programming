@@ -17,7 +17,7 @@ void print_int(va_list all_parameters)
  */
 void print_char(va_list all_parameters)
 {
-	printf("%c", va_arg(all_parameters, char));
+	printf("%c", va_arg(all_parameters, int));
 }
 /**
  * print_float - prints a float
@@ -34,7 +34,7 @@ void print_float(va_list all_parameters)
  */
 void print_string(va_list all_parameters)
 {
-	char *str = va_arg(all_parameters, char *);
+	char *str = va_arg(all_parameters, int *);
 
 	if (!str)
 	{
@@ -51,17 +51,16 @@ void print_string(va_list all_parameters)
 void print_all(const char * const format, ...)
 {
 	va_list all_parameters;
+	char *string = "", *string2 = ", ";
 	int i = 0;
 	int j = 0;
 	specifier_t structs_ar[] = {
-		{'c', print_char},
-		{'i', print_int},
-		{'f', print_float},
-		{'s', print_string},
-		{'\0', NULL}
+		{"c", print_char},
+		{"i", print_int},
+		{"f", print_float},
+		{"s", print_string},
+		{"\0", NULL}
 	};
-
-	char *string = "", *string2 = ", ";
 
 	va_start(all_parameters, format);
 	while (format && format[i])
@@ -69,7 +68,7 @@ void print_all(const char * const format, ...)
 		j = 0;
 		while (structs_ar[j].spec)
 		{
-		if (format[i] == structs_ar[j].spec)
+		if (format[i] == *structs_ar[j].spec)
 		{
 			printf("%s", string);
 			structs_ar[j].function_ptr(all_parameters);

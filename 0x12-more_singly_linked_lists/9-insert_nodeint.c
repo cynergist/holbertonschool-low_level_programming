@@ -9,8 +9,11 @@
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	listint_t *new_node, *node;
+	listint_t *new_node = 0, *node;
 	unsigned int i = 0;
+
+	if (head == NULL || new_node == NULL)
+		return (NULL);
 /* Create space for new_node */
 	new_node = malloc(sizeof(listint_t));
 /* Check if idx exists so we can cadd new_node at idx */

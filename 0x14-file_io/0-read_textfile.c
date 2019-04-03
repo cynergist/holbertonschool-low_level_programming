@@ -15,14 +15,14 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	char *buffer;
 /* buffer to read data from. we already have letters, the len of buffer */
 /* validation statements below */
-	if (! filename)
+	if (!filename)
 		return (0);
 /* we malloc letters to get the size of the buffer */
 	buffer = malloc(letters);
-	if (! buffer)
+	if (!buffer)
 		return (0);
 /* initialize open with file descriptor */
-	file = open(filename, O-RDONLY);
+	file = open(filename, O_RDONLY);
 	if (file == -1)
 		return (0);
 /* initialize read with a variable set to parameters */
@@ -30,7 +30,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (now_reading == -1)
 		return (0);
 	{
-		free (buffer);
+		free(buffer);
 		return (0);
 	}
 	close(file);
@@ -38,7 +38,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	now_writing = write(STDOUT_FILENO, buffer, now_reading);
 	if (now_writing == -1)
 	{
-		free (buffer);
+		free(buffer);
 		return (0);
 	}
 	return (now_writing);

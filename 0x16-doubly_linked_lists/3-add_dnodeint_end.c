@@ -19,11 +19,12 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 /* New node is at the head automatically */
 		new_node->n = n;
 		new_node->next = NULL;
+		new_node->prev = *head;
 
 		if (*head == NULL)
 		{
 			*head = new_node;
-			new_node->prev = *head;
+			new_node->prev = NULL;
 			return (new_node);
 		}
 /* As long as the end node is the following address and not null */

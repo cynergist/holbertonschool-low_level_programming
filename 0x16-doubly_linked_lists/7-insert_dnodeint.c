@@ -20,10 +20,11 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	if (!idx)
 /* If idx is NULL, new_node points to n value */
 	{
+		idx = 0;
 /* Set new_node->next to h and update head pointer */
 		new_node->next = *h;
 		*h = new_node;
-		return (new_node);
+		return (NULL);
 	}
 /* Implicit "else" here. Now setting head pointer to "node" to indicate shift*/
 	node = *h;

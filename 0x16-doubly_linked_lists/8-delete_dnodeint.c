@@ -1,4 +1,25 @@
 #include "lists.h"
+int delete_dnodeint_at_index(dlistint_t **head, unsigned int index);
+/**
+ * dlistint_len - Returns number of elements of a doubly linked list
+ * @h: a variable of const type dlistint_t
+ *
+ * Return: number of elements
+ */
+size_t dlistint_len(const dlistint_t *h)
+{
+	size_t node_num = 0;
+	const dlistint_t *temp = h;
+/* As long as pointer to temp is not NULL */
+	while (temp)
+	{
+/* This incrementation counts up the number of elements */
+		node_num++;
+/* Reassign pointer to the next node in the list */
+		temp = temp->next;
+	}
+	return (node_num);
+}
 /**
  * delete_dnodeint_at_index - deletes the node at a given position
  * @head: a pointer to a head of struct of type dlistint_t
@@ -8,33 +29,25 @@
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	dlistint_t *delete_node = malloc(sizeof(dlistint_t));
-	dlistint_t *next;
-/*	unsigned int count = 0; */
+	dlistint_t *del_node = *head;
+	unsigned int count = 0;
 /* base case */
 	if (*head == NULL)
 		return (-1);
-/* If head node is the node to be deleted */
-	if (*head == delete_node)
-		*head = delete_node->next;
-/* Change next if delete_node is not last node */
-	if (delete_node == NULL || delete_node->next != NULL)
+while (del_node && count < index)
+	del_node = del_node->next;
+count++;
+/* Change next if del_node is not last node */
+	if (del_node == NULL)
 		return (-1);
-		delete_node->next->prev = delete_node->prev;
-/* Change prev if delete_node is not the first node */
-	if (delete_node->prev != NULL)
-		delete_node->prev->next = delete_node->next;
-/* Check if index exists so we can delete new_node at idx */
-	if (index == 0)
-/* If index is NULL, new_node points to n value */
-	{
-/* Set delete_node->next to head and update head pointer */
-		delete_node->next = *head;
-		free(delete_node);
-		return (1);
-	}
-	next = delete_node->next->next;
-	free(delete_node->next);
-	delete_node->next = next;
+/* Change prev if del_node is not the first node */
+	if (del_node->prev != NULL)
+		del_node->prev->next = del_node->next;
+/* If del_node is not the next node */
+if (del_node->next != NULL)
+	del_node->next->prev = del_node->prev;
+if (*head == del_node)
+	*head = del_node->next;
+free(del_node);
 	return (1);
 }

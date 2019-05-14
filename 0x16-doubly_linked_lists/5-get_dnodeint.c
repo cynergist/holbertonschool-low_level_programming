@@ -10,8 +10,6 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
 	dlistint_t *current = head;
 	unsigned int count = 0;
-	if (current == NULL)
-		return (NULL);
 /* Check that previous node is NULL */
 	current->prev = NULL;
 /* Loop through linked list */
@@ -20,6 +18,8 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 /* As long as count is equal to the passed index, return crrent node */
 		if (count == index)
 			return (current);
+		if (current == NULL)
+			return (NULL);
 		count++;
 /* Change current to point to next of the current */
 		current = current->next;

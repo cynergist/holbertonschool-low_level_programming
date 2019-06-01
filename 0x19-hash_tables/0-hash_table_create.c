@@ -12,7 +12,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 	if (size <= 0)
 		return (NULL);
 /* allocate for pointer to hash table struct */
-	ht = malloc(sizeof(hash_table_t));
+	ht = calloc(1, sizeof(hash_table_t));
 
 /* check if size is null */
 	if (!ht)
@@ -20,7 +20,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 		return (NULL);
 	}
 /* allocate array of pointers */
-	ht->array = malloc(sizeof(hash_node_t *) * size);
+	ht->array = calloc(size, sizeof(hash_node_t *));
 	if (!ht->array)
 	{
 		free(ht);

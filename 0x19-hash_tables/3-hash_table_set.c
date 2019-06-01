@@ -12,20 +12,16 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned long index;
 	hash_node_t *new, *current;
 	char *value_copy;
-	/* key can not be an empty string */
-	/* value can be empty string */
+
 	if (!ht || !key || !*key || !value)
 		return (0);
-	/* key_index called on key */
 	index = key_index((const unsigned char *)key, ht->size);
 	value_copy = strdup(value);
 	if (value_copy == NULL)
 		return (0);
-	/* check each node to see if key already exists */
 	if (ht->array[index])
 	{
 		current = ht->array[index];
-
 		while (current)
 		{
 			if (strcmp(current->key, key) == 0)
@@ -37,14 +33,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			current = current->next;
 		}
 	}
-	/* create new hash_node_type */
 	new = malloc(sizeof(hash_node_t));
 	if (!new)
 	{
 		free(value_copy);
 		return (0);
 	}
-	/* copy key/value pair into new node */
 	new->key = strdup(key);
 	if (!new->key)
 	{

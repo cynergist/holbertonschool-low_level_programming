@@ -1,7 +1,6 @@
 #include "hash_tables.h"
 /**
  * hash_table_set - adds an element to the hash table
- *
  * @ht: hash table we add or update key/value
  * @key: key in the key/value pair
  * @value: value associated with the key
@@ -11,12 +10,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long index;
 	hash_node_t *new, *current;
-	char *value_copy;
+	char *value_copy = strdup(value);
 
 	if (!ht || !key || !*key || !value)
 		return (0);
 	index = key_index((const unsigned char *)key, ht->size);
-	value_copy = strdup(value);
 	if (value_copy == NULL)
 		return (0);
 	if (ht->array[index])

@@ -6,16 +6,16 @@ CFLAGS = -Wall -Werror -Wextra -pedantic
 DEPS = sort.h
 
 0-bubble_sort: ${DEPS}
-	${GCC} $(CFLAGS) $@.c 0-main.c sorting_helpers.c -o $@
+	${GCC} $(CFLAGS) $@.c 0-main.c print_array.c -o $@
 
 1-insertion_sort_list: ${DEPS}
-	${GCC} $(CFLAGS) $@.c 1-main.c sorting_helpers.c -o $@
+	${GCC} $(CFLAGS) $@.c 1-main.c print_list.c -o $@
 
 2-selection_sort: ${DEPS}
-	${GCC} $(CFLAGS) $@.c 2-main.c sorting_helpers.c -o $@
+	${GCC} $(CFLAGS) $@.c 2-main.c print_array.c -o $@
 
 3-quick_sort: ${DEPS}
-	${GCC} $(CFLAGS) $@.c 3-main.c sorting_helpers.c -o $@
+	${GCC} $(CFLAGS) $@.c 3-main.c print_array.c -o $@
 
 clean:
 	$(RM) *.o

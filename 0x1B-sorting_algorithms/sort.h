@@ -19,11 +19,7 @@ typedef struct listint_s
 
 /* sorting_helpers.c */
 void swap_ints(int *a, int *b);
-
-/* sorting_helpers.c */
 void print_array(const int *array, size_t size);
-
-/* sorting_helpers.c */
 void print_list(const listint_t *list);
 
 /* 0-bubble_sort.c */

@@ -23,11 +23,11 @@ void bubble_sort(int *array, size_t size)
 	int sorting = 1;
 
 	while (sorting)
-		/* handles the length of the array */
+/* handles the length of the array */
 	{
 		sorting = 0;
 		while (i < (size - 1))
-			/* handles a consecutive pair of ints in the array */
+/* handles a consecutive pair of ints in the array */
 		{
 			if (array[i] > array[i + 1])
 			{

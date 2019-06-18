@@ -1,5 +1,6 @@
 #ifndef SORT_H
 #define SORT_H
+#include <stdlib.h>
 /**
  * struct listint_s - Doubly linked list node
  *
@@ -14,9 +15,10 @@ typedef struct listint_s
 	struct listint_s *next;
 } listint_t;
 
-/* sorting_helpers.c */
-void swap_ints(int *a, int *b);
+/* print_array.c */
 void print_array(const int *array, size_t size);
+
+/* print_list.c */
 void print_list(const listint_t *list);
 
 /* 0-bubble_sort.c */

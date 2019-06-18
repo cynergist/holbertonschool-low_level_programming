@@ -16,13 +16,14 @@ typedef struct listint_s
 	struct listint_s *prev;
 	struct listint_s *next;
 } listint_t;
-/* swap_ints.c */
+
+/* sorting_helpers.c */
 void swap_ints(int *a, int *b);
 
-/* print_array.c */
+/* sorting_helpers.c */
 void print_array(const int *array, size_t size);
 
-/* print_list.c */
+/* sorting_helpers.c */
 void print_list(const listint_t *list);
 
 /* 0-bubble_sort.c */

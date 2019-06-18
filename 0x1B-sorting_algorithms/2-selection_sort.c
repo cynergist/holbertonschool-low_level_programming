@@ -21,22 +21,23 @@ void selection_sort(int *array, size_t size)
 {
 	size_t i, j, j_min;
 
-	i = 0;
-
-	while (i < size - 1)
+	/* Move index of unsorted portion of array */
+	for (i = 0; i < size - 1; i++)
 	{
-		j = i;
 		j_min = i;
-
-		while (j < size)
+		/* Finding min int from array[i] to array[i - 1] */
+		for (j = i + 1; j < size; j++)
 		{
 			/* Save the location of the min int in array */
 			if (array[j_min] > array[j])
+				/* j remembers the min int */
 				j_min = j;
-			j++;
 		}
-		print_array(array, size);
-		swap_ints(&array[i], &array[j_min]);
-		i++;
+		/* Check to ensure i is j_min, if not, swap */
+		if (j_min != i)
+		{
+			swap_ints(&array[i], &array[j_min]);
+			print_array(array, size);
+		}
 	}
 }

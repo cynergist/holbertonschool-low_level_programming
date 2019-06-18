@@ -1,17 +1,20 @@
 #include "sort.h"
+#include <stdlib.h>
+#include <stdio.h>
 /**
  * swap_ints - a function that swaps two integers
  *
  * @a: first integer
  * @b: second integer
  */
+
 void swap_ints(int *a, int *b)
 {
 	int temp = *a;
 	*a = *b;
 	*b = temp;
 }
-#include "sort.h"
+
 /**
  * print_array - Prints an array of integers
  *
@@ -34,7 +37,6 @@ void print_array(const int *array, size_t size)
 	printf("\n");
 }
 
-#include "sort.h"
 /**
  * print_list - Prints a list of integers
  *

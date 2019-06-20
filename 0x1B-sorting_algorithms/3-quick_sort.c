@@ -28,25 +28,25 @@ int partition(int *array, size_t lo, size_t hi, size_t size)
 {
 	int pivot = array[hi];
 	/* Pivot is assigned to the last element of the array */
-	size_t smalls = lo - 1;
+	size_t smalls = (lo - 1);
 	/* Smalls will be all ints lower than pivot */
 	size_t bigs = lo;
 	/* Bigs will be all ints higher than pivot */
 
-	while (bigs < hi)
+	while (bigs <= hi - 1)
 	{
 		/*if the int value at bigs is smaller or equal to pivot */
-		if (array[bigs] < pivot)
+		if (array[bigs] <= pivot)
 		{
 			/* increment small side of the pivot */
 			smalls++;
-			/* swap the smaller number to the left side of the pivot */
+			/* swap the smaller number to left side of the pivot */
 			swap_ints(&array[smalls], &array[bigs]);
-			print_array(array, size);
 		}
 		bigs++;
 	}
 	swap_ints(&array[smalls + 1], &array[hi]);
+	print_array(array, size);
 	return (bigs);
 }
 /**
@@ -80,5 +80,5 @@ void quick_sort(int *array, size_t size)
 {
 	if (size < 2)
 		return;
-		sorting(array, 0, size - 1, size);
+	sorting(array, 0, size - 1, size);
 }

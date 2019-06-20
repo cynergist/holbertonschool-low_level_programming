@@ -43,8 +43,10 @@ int partition(int *array, int lo, int hi, size_t size)
 			smalls++;
 			/* swap the smaller number to left side of the pivot */
 			if (smalls != bigs)
+			{
 				swap_ints(&(array[smalls]), &(array[bigs]));
 				print_array(array, size);
+			}
 		}
 	}
 	if (array[smalls + 1] > array[hi])
@@ -52,7 +54,7 @@ int partition(int *array, int lo, int hi, size_t size)
 		swap_ints(&(array[smalls + 1]), &(array[hi]));
 		print_array(array, size);
 	}
-return (smalls + 1);
+	return (smalls + 1);
 }
 /**
  * sorting - a function that sorts an array of ints in ascending order

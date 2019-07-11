@@ -19,55 +19,64 @@ gcc main.o holberton.o -o holberton`
 ## Tasks
 
 0. 0-Makefile // My first seahorse Makefile.
-- name of the executable: `holberton`
-- rules: `all`
+name of the executable: `holberton`
+rules: `all`
 - The `all` rule builds my executable
-- variables: none
+variables: none
 
 1. 1-Makefile // All rule builds executable.
-- name of the executable: `holberton`
-- rules: `all`
-- variables: `CC` (The compiler we're using) , `SRC` (the .c files)
+name of the executable: `holberton`
+rules: `all`
+variables: `CC` (The compiler we're using) , `SRC` (the .c files)
 
 2. 2-Makefile // My second useful Makefile. My [first one is here](https://github.com/cynergist/holbertonschool-low_level_programming/blob/master/0x1B-sorting_algorithms/Makefile).
+name of the executable: `holberton`
+rules: `all`
+- The `all` rule builds my executable
+variables: `CC`, `SRC`, `OBJ`, `NAME`
+`CC`: the compiler to be used
+`SRC`: the `.c` files
+`OBJ`: the `.o` files
+`NAME`: the name of the executable
+- The `all` rule should recompile only the updated source files
+I was not allowed to have a list of all the `.o` files
 
 3. 3-Makefile // Building on Makefile 2.
-- name of the executable: `holberton`
-- rules: `all`, `clean`, `oclean`, `fclean`, `re`
-- `all`: builds my executable
-- `clean`: deletes all Emacs temporary files along with the executable
-- `oclean`: deletes the object files
-- `fclean`: deletes the Emacs temporary files, the executable, and the object files
-- `re`: forces recompilation of all source files
-- variables: `CC`, `SRC`, `OBJ`, `NAME`, `RM`
-- `CC`: the compiler to be used
-- `SRC`: the `.c` files
-- `OBJ`: the `.o` files
-- `NAME`: the name of the executable
-- `RM`: the program to delete files
+name of the executable: `holberton`
+rules: `all`, `clean`, `oclean`, `fclean`, `re`
+`all`: builds my executable
+`clean`: deletes all Emacs temporary files along with the executable
+`oclean`: deletes the object files
+`fclean`: deletes the Emacs temporary files, the executable, and the object files
+`re`: forces recompilation of all source files
+variables: `CC`, `SRC`, `OBJ`, `NAME`, `RM`
+`CC`: the compiler to be used
+`SRC`: the `.c` files
+`OBJ`: the `.o` files
+`NAME`: the name of the executable
+`RM`: the program to delete files
 - The `all` rule should recompile only the updated source files
 - The `clean`, `oclean`, `fclean`, `re` rules should never fail
-- You are not allowed to have a list of all the `.o` files
+I was not allowed to have a list of all the `.o` files
 
 4. 4-Makefile // List of `.o` files not allowed.
-- name of the executable: `holberton`
-- rules: `all`, `clean`, `oclean`, `fclean`, `re`
-- `all`: builds my executable
-- `clean`: deletes all Emacs temporary files along with the executable
-- `oclean`: deletes the object files
-- `fclean`: deletes the Emacs temporary files, the executable, and the object files
-- `re`: forces recompilation of all source files
-- variables: `CC`, `SRC`, `OBJ`, `NAME`, `RM`, `CFLAGS`
-- `CC`: the compiler to be used
-- `SRC`: the `.c` files
-- `OBJ`: the `.o` files
-- `NAME`: the name of the executable
-- `RM`: the program to delete files
-- `CFLAGS`: school's favorite compiler flags: `-Wall -Werror -Wextra -pedantic`
+name of the executable: `holberton`
+rules: `all`, `clean`, `oclean`, `fclean`, `re`
+`all`: builds my executable
+`clean`: deletes all Emacs temporary files along with the executable
+`oclean`: deletes the object files
+`fclean`: deletes the Emacs temporary files, the executable, and the object files
+`re`: forces recompilation of all source files
+variables: `CC`, `SRC`, `OBJ`, `NAME`, `RM`, `CFLAGS`
+`CC`: the compiler to be used
+`SRC`: the `.c` files
+`OBJ`: the `.o` files
+`NAME`: the name of the executable
+`RM`: the program to delete files
+`CFLAGS`: school's favorite compiler flags: `-Wall -Werror -Wextraman -pedantic`
 - The `all` rule should recompile only the updated source files
 - The `clean`, `oclean`, `fclean`, `re` rules should never fail
-- You are not allowed to have a list of all the `.o` files
-/List of all the `.o` files **disallowed**/
+I was not allowed to have a list of all the `.o` files
 
 5. 5-island_perimeter.py // Technical interview preparation:
 
@@ -90,40 +99,22 @@ Requirements:
 - Module and function must be documented
 
 6. 100-Makefile // make -f 100-Makefile
-- name of the executable: `holberton`
-- rules: `all`, `clean`, `oclean`, `fclean`, `re`
-- `all`: builds my executable
-- `clean`: deletes all Emacs temporary files along with the executable
-- `oclean`: deletes the object files
-- `fclean`: deletes the Emacs temporary files, the executable, and the object files
-- `re`: forces recompilation of all source files
-- variables: `CC`, `SRC`, `OBJ`, `NAME`, `RM`, `CFLAGS`
-- `CC`: the compiler to be used
-- `SRC`: the `.c` files
-- `OBJ`: the `.o` files
-- `NAME`: the name of the executable
-- `RM`: the program to delete files
-- `CFLAGS`: school's favorite compiler flags: `-Wall -Werror -Wextra -pedantic`
+name of the executable: `holberton`
+rules: `all`, `clean`, `oclean`, `fclean`, `re`
+`all`: builds my executable
+`clean`: deletes all Emacs temporary files along with the executable
+`oclean`: deletes the object files
+`fclean`: deletes the Emacs temporary files, the executable, and the object files
+`re`: forces recompilation of all source files
+variables: `CC`, `SRC`, `OBJ`, `NAME`, `RM`, `CFLAGS`
+`CC`: the compiler to be used
+`SRC`: the `.c` files
+`OBJ`: the `.o` files
+`NAME`: the name of the executable
+`RM`: the program to delete files
+`CFLAGS`: school's favorite compiler flags: `-Wall -Werror -Wextra -pedantic`
 - The `all` rule should recompile only the updated source files
 - The `clean`, `oclean`, `fclean`, `re` rules should never fail
-- You are not allowed to have a list of all the `.o` files
-- name of the executable: `holberton`
-- rules: `all`, `clean`, `oclean`, `fclean`, `re`
-- `all`: builds my executable
-- `clean`: deletes all Emacs temporary files along with the executable
-- `oclean`: deletes the object files
-- `fclean`: deletes the Emacs temporary files, the executable, and the object files
-- `re`: forces recompilation of all source files
-- variables: `CC`, `SRC`, `OBJ`, `NAME`, `RM`, `CFLAGS`
-- `CC`: the compiler to be used
-- `SRC`: the `.c` files
-- `OBJ`: the `.o` files
-- `NAME`: the name of the executable
-- `RM`: the program to delete files
-- `CFLAGS`: school's favorite compiler flags: `-Wall -Werror -Wextra -pedantic`
-- The `all` rule should recompile only the updated source files
-- The `clean`, `oclean`, `fclean`, `re` rules should never fail
-- I was not allowed to have a list of all the `.o` files
 - I had to use `$(RM)` for the cleaning up rules, but you are not allowed to set the `RM` variable
 - I was not allowed to use the string `$(CC)` more than once in your Makefile
 - I was only allowed to use the string `$(RM)` twice in your Makefile

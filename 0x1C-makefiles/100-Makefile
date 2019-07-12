@@ -11,7 +11,7 @@ CFLAGS = -Wall -Werror -Wextra -pedantic
 # Sets any dependencies
 DEPS = m.h
 # .PHONY executes rules even if files of same names exist
-.PHONY: all clean
+.PHONY: all
 # The all rule builds the executable
 all: 	${OBJ} ${DEPS}
 	${CC} ${OBJ} -o ${NAME}
@@ -24,4 +24,4 @@ oclean:
 # The fclean rule deletes Emacs temporary files, the executable, and .o files
 fclean:	clean oclean
 # The re rule forces recompilation of all source files
-re:	oclean all ${OBJ} ${DEPS}
+re:	oclean all

@@ -17,12 +17,11 @@ all: 	${OBJ} ${DEPS}
 	${CC} ${OBJ} -o ${NAME}
 # The clean rule deletes all Emacs temporary files along with the executable
 clean:
-	${RM} -f *~ ${NAME}
+	${RM} *~ ${NAME}
 # The oclean rule deletes .o files
 oclean:
-	${RM} -f ${OBJ}
+	${RM} ${OBJ}
 # The fclean rule deletes Emacs temporary files, the executable, and .o files
 fclean:	clean oclean
-
 # The re rule forces recompilation of all source files
 re:	oclean all ${OBJ} ${DEPS}

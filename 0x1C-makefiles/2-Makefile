@@ -9,11 +9,3 @@ NAME = holberton
 # The all rule builds the executable
 all: 	${OBJ}
 	${CC} ${OBJ} -o ${NAME}
-# Recompiles only if the file has changed
-holberton:	holberton.o main.o
-	${CC} holberton.o $@
-main.o:	main.c
-	${CC} -c main.c
-
-holberton.o: holberton.c
-	${CC} -c holberton.c

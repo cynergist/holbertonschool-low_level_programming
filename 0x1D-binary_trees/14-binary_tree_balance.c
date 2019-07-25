@@ -11,6 +11,8 @@ int binary_tree_balance(const binary_tree_t *tree)
 
 	if (!tree)
 		return (0);
+	/* NULL needs to have a height of -1 for balance factor to be correct */
+	/* when a parent is not "full" */
 	if (!tree->left)
 		height_left = -1;
 	else
@@ -20,7 +22,7 @@ int binary_tree_balance(const binary_tree_t *tree)
 		height_right = -1;
 	else
 		height_right = binary_tree_height(tree->right);
-
+	/* Get balance factor of any parent by subtracting R from L height */
 	bf = height_left - height_right;
 
 	return (bf);
@@ -45,7 +47,7 @@ size_t binary_tree_height(const binary_tree_t *tree)
 		right_height = binary_tree_height(tree->right);
 
 		if (left_height > right_height)
-			/* Take the max and add 1 for parent */
+			/* Take the greater height and add 1 for parent */
 			return (left_height + 1);
 		else
 			return (right_height + 1);

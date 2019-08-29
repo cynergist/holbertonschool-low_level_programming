@@ -15,13 +15,15 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 /* Initializing arguments to store all values after n */
 	va_start(ap, n);
 
-	if (!separator || separator == NULL)
-		printf("NULL");
 /* This loops through all the other arguments. n contains count of variables */
 	for (i = 0; i < n; i++)
 	{
-		printf("%i\n", va_arg(ap, int));
+		printf("%i", va_arg(ap, int));
+
+	if (separator != NULL && i < n - 1)
+		printf("%s", separator);
 	}
 /* Cleans up the list */
+	printf("\n");
 	va_end(ap);
 }

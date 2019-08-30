@@ -9,6 +9,9 @@
 int linear_search(int *array, size_t size, int value)
 {
 	size_t i;
+	/* If pointer array or value does not exist return -1 */
+	if (!array || !value)
+		return (-1);
 
 	for (i = 0; i < size; i++)
 	{
@@ -16,10 +19,7 @@ int linear_search(int *array, size_t size, int value)
 		if (array[i] == value)
 			return (i);
 	}
-	/* If pointer array or value does not exist return -1 */
-	if (!array || !value)
-		return (-1);
-	return (1);
+	return (-1);
 }
 
 /**

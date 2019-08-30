@@ -10,7 +10,7 @@ A function that searches for a value in a sorted array of integers using the [Bi
 2. Big O #0 // 2-O
 What is the `time complexity` (worst case) of a linear search in an array of size `n`?
 
-3. 3. Big O #1 // 3-O
+3. Big O #1 // 3-O
 What is the `space complexity` (worst case) of an iterative linear search algorithm in an array of size `n`?
 
 4. Big O #2 // 4-O

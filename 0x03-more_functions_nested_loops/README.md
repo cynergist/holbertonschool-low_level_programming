@@ -40,7 +40,7 @@ You do not have to understand the call by reference (address), stack, static var
 
 ## Tasks <br />
 
-### [0. 0-isupper.c](./0-isupper) // a function that checks for uppercase character.
+### [0. 0-isupper.c](./0-isupper.c) // a function that checks for uppercase character.
 
 * Prototype: int _isupper(int c);
 * Returns 1 if c is uppercase
@@ -48,7 +48,7 @@ You do not have to understand the call by reference (address), stack, static var
 
 FYI: The standard library provides a similar function: isupper. Run man isupper to learn more.
 
-### [1. 1-isdigit.c](./1-isdigit) // a function that checks for a digit (0 through 9).
+### [1. 1-isdigit.c](./1-isdigit.c) // a function that checks for a digit (0 through 9).
 
 * Prototype: int _isdigit(int c);
 * Returns 1 if c is a digit
@@ -56,27 +56,27 @@ FYI: The standard library provides a similar function: isupper. Run man isupper 
 
 FYI: The standard library provides a similar function: isdigit. Run man isdigit to learn more.
 
-### [2. 2-mul.c](./2-mul) // a function that multiplies two integers.
+### [2. 2-mul.c](./2-mul.c) // a function that multiplies two integers.
 
 * Prototype: int mul(int a, int b);
 
-### [3. 3-print_numbers.c](./3-print_numbers) // a function that prints the numbers, from 0 to 9, followed by a new line.
+### [3. 3-print_numbers.c](./3-print_numbers.c) // a function that prints the numbers, from 0 to 9, followed by a new line.
 
 * Prototype: void print_numbers(void);
 * You can only use _putchar twice in your code
 
-### [4. 4-print_most_numbers.c](./4-print_most_numbers) // a function that prints the numbers, from 0 to 9, followed by a new line.
+### [4. 4-print_most_numbers.c](./4-print_most_numbers.c) // a function that prints the numbers, from 0 to 9, followed by a new line.
 
 * Prototype: void print_most_numbers(void);
 * Do not print 2 and 4
 * You can only use _putchar twice in your code
 
-### [5. 5-more_numbers.c](./5-more_numbers) // a function that prints 10 times the numbers, from 0 to 14, followed by a new line.
+### [5. 5-more_numbers.c](./5-more_numbers.c) // a function that prints 10 times the numbers, from 0 to 14, followed by a new line.
 
 * Prototype: void more_numbers(void);
 * You can only use _putchar three times in your code
 
-### [6. 6-print_line.c](./6-print_line) // a function that draws a straight line in the terminal.
+### [6. 6-print_line.c](./6-print_line.c) // a function that draws a straight line in the terminal.
 
 * Prototype: void print_line(int n);
 * You can only use _putchar function to print
@@ -84,7 +84,7 @@ FYI: The standard library provides a similar function: isdigit. Run man isdigit 
 * The line should end with a \n
 * If n is 0 or less, the function should only print \n
 
-### [7. 7-print_diagonal.c](./7-print_diagonal) // a function that draws a diagonal line on the terminal.
+### [7. 7-print_diagonal.c](./7-print_diagonal.c) // a function that draws a diagonal line on the terminal.
 
 * Prototype: void print_diagonal(int n);
 * You can only use _putchar function to print
@@ -92,7 +92,7 @@ FYI: The standard library provides a similar function: isdigit. Run man isdigit 
 * The diagonal should end with a \n
 * If n is 0 or less, the function should only print a \n
 
-### [8. 8-print_square.c](./8-print_square) // a function that prints a square, followed by a new line.
+### [8. 8-print_square.c](./8-print_square.c) // a function that prints a square, followed by a new line.
 
 * Prototype: void print_square(int size);
 * You can only use _putchar function to print
@@ -100,14 +100,14 @@ FYI: The standard library provides a similar function: isdigit. Run man isdigit 
 * If size is 0 or less, the function should print only a new line
 * Use the character # to print the square
 
-### [9. 9-fizz_buzz.c](./9-fizz_buzz) // The “Fizz-Buzz test” is an interview question designed to help filter out the 99.5% of programming job candidates who can’t seem to program their way out of a wet paper bag.
+### [9. 9-fizz_buzz.c](./9-fizz_buzz.c) // The “Fizz-Buzz test” is an interview question designed to help filter out the 99.5% of programming job candidates who can’t seem to program their way out of a wet paper bag.
 
 Write a program that prints the numbers from 1 to 100, followed by a new line. But for multiples of three print Fizz instead of the number and for the multiples of five print Buzz. For numbers which are multiples of both three and five print FizzBuzz.
 
 * Each number or word should be separated by a space
 * You are allowed to use the standard library
 
-### [10. 10-print_triangle.c](./10-print_triangle) // a function that prints a triangle, followed by a new line.
+### [10. 10-print_triangle.c](./10-print_triangle.c) // a function that prints a triangle, followed by a new line.
 
 * Prototype: void print_triangle(int size);
 * You can only use _putchar function to print

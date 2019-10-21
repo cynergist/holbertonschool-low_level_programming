@@ -1,4 +1,4 @@
-# 0x00. C - Hello, World
+# 0x01. C - Variables: If, Else, While
 
 ## Learning Objectives
 * Why C programming is awesome (don’t forget to tweet today, with the hashtag #cisfun :))
